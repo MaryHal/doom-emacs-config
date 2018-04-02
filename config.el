@@ -1,5 +1,46 @@
 ;;; private/mary/config.el -*- lexical-binding: t; -*-
 
+(setq-default server-auth-dir (concat doom-emacs-dir "server/"))
+
+(when (string= system-type "windows-nt")
+  (set-selection-coding-system 'utf-16-le))
+
+;; No line numbers
+(setq doom-line-numbers-style nil)
+
+;; (setq doom-theme 'doom-one) ;; doom-themes' flagship theme, inspired by Atom's One Dark themes
+;; (setq doom-theme 'doom-one-light) ;; light version of doom-one (thanks to ztlevi)
+;; (setq doom-theme 'doom-vibrant) ;; a slightly more vibrant version of doom-one
+;; (setq doom-theme 'doom-city-lights) ;; (thanks to fuxialexander)
+;; (setq doom-theme 'doom-darcula) ;; (thanks to fuxialexander)
+;; (setq doom-theme 'doom-molokai) ;; based on Textmate's monokai
+;; (setq doom-theme 'doom-nord) ;; (thanks to fuxialexander)
+;; (setq doom-theme 'doom-nova) ;; adapted from Nova (thanks to bigardone)
+;; (setq doom-theme 'doom-peacock) ;; based on Peacock from daylerees' themes (thanks to teesloane)
+;; (setq doom-theme 'doom-solarized-light) ;; light variant of Solarized (thanks to fuxialexander)
+;; (setq doom-theme 'doom-spacegrey) ;; I'm sure you've heard of it (thanks to teesloane)
+(setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
+;; (setq doom-theme 'doom-tomorrow-day) ;; by Chris Kempson (thanks to emacswatcher)
+;; (setq doom-theme 'doom-mono-dark) ;; a minimalistic, monochromatic theme
+;; (setq doom-theme 'doom-mono-light) ;; a minimalistic, monochromatic theme
+;; (setq doom-theme 'doom-tron) ;; based on Tron Legacy from daylerees' themes
+
+(setq doom-font
+      (font-spec :family "Iosevka Term Slab"
+                 :size 12))
+(setq doom-big-font
+      (font-spec :family "Iosevka Term Slab"
+                 :size 18))
+(setq doom-variable-pitch-font
+      (font-spec :family "Sarasa Gothic J"
+                 :size 12))
+(setq doom-unicode-font
+      (font-spec :family "Sarasa Mono J"
+                 :size 12))
+
+(setq-default frame-title-format '("%b - Emacs"))
+(setq +doom-dashboard-functions '(doom-dashboard-widget-shortmenu doom-dashboard-widget-loaded))
+
 (when (featurep! :feature evil)
   (load! +bindings))
 
