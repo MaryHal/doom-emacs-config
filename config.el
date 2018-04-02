@@ -101,7 +101,10 @@
 ;;                 (delq 'yas-installed-snippets-dir yas-snippet-dirs))))
 
 (after! magit
-  (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1))
+  (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+
+  (when IS-WINDOWS
+    (setenv "SSH_ASKPASS" "git-gui--askpass")))
 
 (setq auto-window-vscroll nil)
 
