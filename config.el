@@ -100,5 +100,6 @@
     (setenv "SSH_ASKPASS" "git-gui--askpass")))
 
 (setq auto-window-vscroll nil)
+(setq w32-pipe-read-delay 0)
 
 (put 'narrow-to-region 'disabled nil)
