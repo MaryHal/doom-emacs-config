@@ -1,5 +1,7 @@
 ;;; private/mary/config.el -*- lexical-binding: t; -*-
 
+(defvar +mary-dir (file-name-directory load-file-name))
+
 (setq-default server-auth-dir (concat doom-emacs-dir "server/"))
 
 (when (string= system-type "windows-nt")
@@ -43,9 +45,6 @@
 
 (when (featurep! :feature evil)
   (load! +bindings))
-
-(defvar +mary-dir (file-name-directory load-file-name))
-(defvar +mary-snippets-dir (expand-file-name "snippets/" +mary-dir))
 
 (def-package! vdiff)
 
@@ -93,12 +92,6 @@
         company-show-numbers nil
         company-require-match 'never
         company-selection-wrap-around t))
-
-;; ;; Don't use default snippets, use mine.
-;; (after! yasnippet
-;;   (setq yas-snippet-dirs
-;;         (append (list '+mary-snippets-dir)
-;;                 (delq 'yas-installed-snippets-dir yas-snippet-dirs))))
 
 (after! magit
   (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
