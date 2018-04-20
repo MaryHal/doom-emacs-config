@@ -21,10 +21,12 @@
           :desc "External Terminal" :n "e" #'+mary:term:open-terminal)
 
         (:desc "project" :prefix "p"
-          :desc "Find file in project"    :n  "f" #'projectile-find-file
-          :desc "Kill project buffers"    :n  "k" #'projectile-kill-buffers
-          :desc "Switch project"          :n  "p" #'projectile-switch-project
-          :desc "Recent project files"    :n  "r" #'projectile-recentf
+          :desc "Find file in project" :n  "f" #'projectile-find-file
+          :desc "Kill project buffers" :n  "k" #'projectile-kill-buffers
+          :desc "Switch project"       :n  "p" #'projectile-switch-project
+          :desc "Recent project files" :n  "r" #'projectile-recentf
+          :desc "Run project"          :n  "g" #'projectile-run-project
+          :desc "Run project tests"    :n  "u" #'projectile-test-project
           (:desc "Search project" :prefix "s"
             :desc "rg" :n "r" #'counsel-projectile-rg
             :desc "ag" :n "a" #'counsel-projectile-ag
