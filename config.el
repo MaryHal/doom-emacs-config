@@ -17,11 +17,12 @@
 ;; (setq doom-theme 'doom-darcula) ;; (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-molokai) ;; based on Textmate's monokai
 ;; (setq doom-theme 'doom-nord) ;; (thanks to fuxialexander)
+(setq doom-theme 'doom-nord-light) ;; (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-nova) ;; adapted from Nova (thanks to bigardone)
 ;; (setq doom-theme 'doom-peacock) ;; based on Peacock from daylerees' themes (thanks to teesloane)
 ;; (setq doom-theme 'doom-solarized-light) ;; light variant of Solarized (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-spacegrey) ;; I'm sure you've heard of it (thanks to teesloane)
-(setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
+;; (setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
 ;; (setq doom-theme 'doom-tomorrow-day) ;; by Chris Kempson (thanks to emacswatcher)
 ;; (setq doom-theme 'doom-mono-dark) ;; a minimalistic, monochromatic theme
 ;; (setq doom-theme 'doom-mono-light) ;; a minimalistic, monochromatic theme
@@ -48,12 +49,12 @@
 
 (def-package! vdiff)
 
-(after! doom-modeline
-  ;; De-bold some icons in doom-modeline
-  (set-face-attribute 'doom-modeline-info            nil :weight 'normal)
-  (set-face-attribute 'doom-modeline-buffer-modified nil :weight 'normal)
-  (set-face-attribute 'doom-modeline-warning         nil :weight 'normal)
-  (set-face-attribute 'doom-modeline-urgent          nil :weight 'normal))
+;; (after! doom-modeline
+;;   ;; De-bold some icons in doom-modeline
+;;   (set-face-attribute 'doom-modeline-info            nil :weight 'normal)
+;;   (set-face-attribute 'doom-modeline-buffer-modified nil :weight 'normal)
+;;   (set-face-attribute 'doom-modeline-warning         nil :weight 'normal)
+;;   (set-face-attribute 'doom-modeline-urgent          nil :weight 'normal))
 
 (after! ivy
   (setq ivy-count-format "  %d/%d ")
@@ -86,12 +87,17 @@
 (after! all-the-icons
   (setq inhibit-compacting-font-caches t))
 
-(after! company
-  (setq company-idle-delay 0
-        company-minimum-prefix-length 2
-        company-show-numbers nil
-        company-require-match 'never
-        company-selection-wrap-around t))
+;; (after! company
+;;   (setq company-idle-delay 0
+;;         company-minimum-prefix-length 2
+;;         company-show-numbers nil
+;;         company-require-match 'never
+;;         company-selection-wrap-around t))
+
+(after! rust-mode
+  (when IS-WINDOWS
+    (set! +rust-src-dir (concat (getenv "Home") "/.rustup/toolchains/nightly-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src"))))
+
 
 (after! magit
   (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
