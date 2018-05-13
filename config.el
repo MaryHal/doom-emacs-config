@@ -49,12 +49,12 @@
 
 (def-package! vdiff)
 
-;; (after! doom-modeline
-;;   ;; De-bold some icons in doom-modeline
-;;   (set-face-attribute 'doom-modeline-info            nil :weight 'normal)
-;;   (set-face-attribute 'doom-modeline-buffer-modified nil :weight 'normal)
-;;   (set-face-attribute 'doom-modeline-warning         nil :weight 'normal)
-;;   (set-face-attribute 'doom-modeline-urgent          nil :weight 'normal))
+(after! doom-modeline
+  ;; De-bold some icons in doom-modeline
+  (set-face-attribute 'doom-modeline-info            nil :weight 'normal)
+  (set-face-attribute 'doom-modeline-buffer-modified nil :weight 'normal)
+  (set-face-attribute 'doom-modeline-warning         nil :weight 'normal)
+  (set-face-attribute 'doom-modeline-urgent          nil :weight 'normal))
 
 (after! ivy
   (setq ivy-count-format "  %d/%d ")
@@ -87,17 +87,13 @@
 (after! all-the-icons
   (setq inhibit-compacting-font-caches t))
 
-;; (after! company
-;;   (setq company-idle-delay 0
-;;         company-minimum-prefix-length 2
-;;         company-show-numbers nil
-;;         company-require-match 'never
-;;         company-selection-wrap-around t))
+(after! company
+  (setq company-minimum-prefix-length 2
+        company-selection-wrap-around t))
 
 (after! rust-mode
   (when IS-WINDOWS
     (set! +rust-src-dir (concat (getenv "Home") "/.rustup/toolchains/nightly-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src"))))
-
 
 (after! magit
   (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
