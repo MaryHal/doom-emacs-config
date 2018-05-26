@@ -17,12 +17,12 @@
 ;; (setq doom-theme 'doom-darcula) ;; (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-molokai) ;; based on Textmate's monokai
 ;; (setq doom-theme 'doom-nord) ;; (thanks to fuxialexander)
-(setq doom-theme 'doom-nord-light) ;; (thanks to fuxialexander)
+;; (setq doom-theme 'doom-nord-light) ;; (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-nova) ;; adapted from Nova (thanks to bigardone)
 ;; (setq doom-theme 'doom-peacock) ;; based on Peacock from daylerees' themes (thanks to teesloane)
 ;; (setq doom-theme 'doom-solarized-light) ;; light variant of Solarized (thanks to fuxialexander)
 ;; (setq doom-theme 'doom-spacegrey) ;; I'm sure you've heard of it (thanks to teesloane)
-;; (setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
+(setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
 ;; (setq doom-theme 'doom-tomorrow-day) ;; by Chris Kempson (thanks to emacswatcher)
 ;; (setq doom-theme 'doom-mono-dark) ;; a minimalistic, monochromatic theme
 ;; (setq doom-theme 'doom-mono-light) ;; a minimalistic, monochromatic theme
