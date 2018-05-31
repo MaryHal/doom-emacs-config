@@ -45,7 +45,7 @@
 (setq +doom-dashboard-functions '(doom-dashboard-widget-shortmenu doom-dashboard-widget-loaded))
 
 (when (featurep! :feature evil)
-  (load! +bindings))
+  (load! "+bindings"))
 
 (def-package! vdiff)
 
