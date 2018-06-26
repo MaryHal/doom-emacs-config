@@ -1,5 +1,7 @@
 ;;; private/mary/config.el -*- lexical-binding: t; -*-
 
+(load! "+bindings")
+
 (defvar +mary-dir (file-name-directory load-file-name))
 
 (setq-default server-auth-dir (concat doom-emacs-dir "server/"))
@@ -10,29 +12,30 @@
 ;; No line numbers
 (setq doom-line-numbers-style nil)
 
-;; (setq doom-theme 'doom-one) ;; doom-themes' flagship theme, inspired by Atom's One Dark themes
-;; (setq doom-theme 'doom-one-light) ;; light version of doom-one (thanks to ztlevi)
-;; (setq doom-theme 'doom-vibrant) ;; a slightly more vibrant version of doom-one
-;; (setq doom-theme 'doom-city-lights) ;; (thanks to fuxialexander)
-;; (setq doom-theme 'doom-darcula) ;; (thanks to fuxialexander)
-;; (setq doom-theme 'doom-molokai) ;; based on Textmate's monokai
-;; (setq doom-theme 'doom-nord) ;; (thanks to fuxialexander)
-;; (setq doom-theme 'doom-nord-light) ;; (thanks to fuxialexander)
-;; (setq doom-theme 'doom-nova) ;; adapted from Nova (thanks to bigardone)
-;; (setq doom-theme 'doom-peacock) ;; based on Peacock from daylerees' themes (thanks to teesloane)
-;; (setq doom-theme 'doom-solarized-light) ;; light variant of Solarized (thanks to fuxialexander)
-;; (setq doom-theme 'doom-spacegrey) ;; I'm sure you've heard of it (thanks to teesloane)
-(setq doom-theme 'doom-tomorrow-night) ;; by Chris Kempson
-;; (setq doom-theme 'doom-tomorrow-day) ;; by Chris Kempson (thanks to emacswatcher)
-;; (setq doom-theme 'doom-mono-dark) ;; a minimalistic, monochromatic theme
-;; (setq doom-theme 'doom-mono-light) ;; a minimalistic, monochromatic theme
-;; (setq doom-theme 'doom-tron) ;; based on Tron Legacy from daylerees' themes
+;; (setq doom-theme 'doom-challenger-deep)
+;; (setq doom-theme 'doom-city-lights)
+(setq doom-theme 'doom-dracula)
+;; (setq doom-theme 'doom-molokai)
+;; (setq doom-theme 'doom-mono-dark)
+;; (setq doom-theme 'doom-mono-light)
+;; (setq doom-theme 'doom-nord)
+;; (setq doom-theme 'doom-nord-light)
+;; (setq doom-theme 'doom-nova)
+;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-one-light)
+;; (setq doom-theme 'doom-peacock)
+;; (setq doom-theme 'doom-solarized-light)
+;; (setq doom-theme 'doom-spacegrey)
+;; (setq doom-theme 'doom-tomorrow-day)
+;; (setq doom-theme 'doom-tomorrow-night)
+;; (setq doom-theme 'doom-tron)
+;; (setq doom-theme 'doom-vibrant)
 
 (setq doom-font
-      (font-spec :family "Iosevka Term Slab"
+      (font-spec :family "Iosevka Slab"
                  :size 12))
 (setq doom-big-font
-      (font-spec :family "Iosevka Term Slab"
+      (font-spec :family "Iosevka Slab"
                  :size 18))
 (setq doom-variable-pitch-font
       (font-spec :family "Sarasa Gothic J"
@@ -43,11 +46,6 @@
 
 (setq-default frame-title-format '("%b - Emacs"))
 (setq +doom-dashboard-functions '(doom-dashboard-widget-shortmenu doom-dashboard-widget-loaded))
-
-(when (featurep! :feature evil)
-  (load! "+bindings"))
-
-(def-package! vdiff)
 
 (after! doom-modeline
   ;; De-bold some icons in doom-modeline
@@ -105,3 +103,5 @@
 (setq w32-pipe-read-delay 0)
 
 (put 'narrow-to-region 'disabled nil)
+
+(setq timer-max-repeats 1)
