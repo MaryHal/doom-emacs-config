@@ -1,6 +1,6 @@
 ;;; private/mary/+bindings.el -*- lexical-binding: t; -*-
 
-(map! :n  "K"      #'join-line
+(map! :n "K" #'join-line
       (:after anzu
         "M-%"   #'anzu-query-replace
         "C-M-%" #'anzu-query-replace-regexp)
@@ -8,11 +8,20 @@
       :nv "+" #'evil-numbers/inc-at-pt
       :nv "-" #'evil-numbers/dec-at-pt
 
+      :n "<f5>" #'+treemacs/toggle
+      (:after treemacs
+        :map treemacs-mode-map
+        "<f5>" #'+treemacs/toggle)
+
       ;; --- <leader> -------------------------------------
       (:leader
         (:desc "workspace" :prefix "TAB"
           :desc "New workspace"            :n "c"   #'+workspace/new
           :desc "Rename workspace"         :n "r"   #'+workspace/rename)
+
+        (:desc "evaluate" :prefix "e"
+          :desc "Buffer" :n "b" #'eval-buffer
+          :desc "Region" :v "r" #'eval-region)
 
         (:desc "buffer" :prefix "b"
           :desc "List buffers"            :n "l" #'list-buffers)
