@@ -14,7 +14,7 @@
 
 ;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-city-lights)
-(setq doom-theme 'doom-dracula)
+;; (setq doom-theme 'doom-dracula)
 ;; (setq doom-theme 'doom-molokai)
 ;; (setq doom-theme 'doom-mono-dark)
 ;; (setq doom-theme 'doom-mono-light)
@@ -23,6 +23,8 @@
 ;; (setq doom-theme 'doom-nova)
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-one-light)
+(setq doom-theme 'doom-opera)
+;; (setq doom-theme 'doom-opera-light)
 ;; (setq doom-theme 'doom-peacock)
 ;; (setq doom-theme 'doom-solarized-light)
 ;; (setq doom-theme 'doom-spacegrey)
@@ -91,13 +93,16 @@
 
 (after! rust-mode
   (when IS-WINDOWS
-    (set! +rust-src-dir (concat (getenv "Home") "/.rustup/toolchains/nightly-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src"))))
+    (setq +rust-src-dir (concat (getenv "Home") "/.rustup/toolchains/nightly-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src"))))
 
 (after! magit
-  (setq-default magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
+  (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
 
   (when IS-WINDOWS
     (setenv "SSH_ASKPASS" "git-gui--askpass")))
+
+(def-package! projectile-ripgrep
+  :after projectile)
 
 (setq auto-window-vscroll nil)
 (setq w32-pipe-read-delay 0)

@@ -37,8 +37,8 @@
           :desc "Run project"          :n  "g" #'projectile-run-project
           :desc "Run project tests"    :n  "u" #'projectile-test-project
           (:desc "Search project" :prefix "s"
-            :desc "rg" :n "r" #'counsel-projectile-rg
-            :desc "ag" :n "a" #'counsel-projectile-ag
-            :desc "g"  :n "g" #'projectile-grep)
+            :desc "counsel rg" :n "c" #'counsel-projectile-rg
+            :desc "rg"         :n "r" #'projectile-ripgrep
+            :desc "ag"         :n "a" #'counsel-projectile-ag
+            :desc "g"          :n "g" #'projectile-grep)
           )))
-

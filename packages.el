@@ -3,3 +3,4 @@
 ;; (package! smartparens :ignore t :disable)
 ;; (package! stripe-buffer :ignore t :disable)
 ;; (package! vdiff)
+(package! projectile-ripgrep)
