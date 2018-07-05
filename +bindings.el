@@ -15,9 +15,8 @@
 
       ;; --- <leader> -------------------------------------
       (:leader
-        (:desc "workspace" :prefix "TAB"
-          :desc "New workspace"            :n "c"   #'+workspace/new
-          :desc "Rename workspace"         :n "r"   #'+workspace/rename)
+        (:desc "workspace" :prefix [tab]
+          :desc "New workspace" :n "c"   #'+workspace/new)
 
         (:desc "evaluate" :prefix "e"
           :desc "Buffer" :n "b" #'eval-buffer
