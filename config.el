@@ -91,10 +91,6 @@
   (setq company-minimum-prefix-length 2
         company-selection-wrap-around t))
 
-(after! rust-mode
-  (when IS-WINDOWS
-    (setq +rust-src-dir (concat (getenv "Home") "/.rustup/toolchains/nightly-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src"))))
-
 (after! magit
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
 
