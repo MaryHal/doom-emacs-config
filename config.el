@@ -41,18 +41,36 @@
 ;; (setq doom-theme 'doom-tron)
 ;; (setq doom-theme 'doom-vibrant)
 
+(defun font-candidate (&rest fonts)
+  "Return the first existing font in FONTS."
+(find-if (lambda (f) (find-font (if (fontp f) f (font-spec :name f)))) fonts))
+
 (setq doom-font
-      (font-spec :family "Iosevka Slab"
-                 :size 13))
+      (font-candidate
+       (font-spec :family "Iosevka Slab"
+                  :size 13)
+       (font-spec :family "PragmataPro"
+                  :size 13)
+       "Monospace 8"
+       (font-spec :family "Consolas"
+                  :size 14)))
 (setq doom-big-font
-      (font-spec :family "Iosevka Slab"
-                 :size 18))
+      (font-candidate
+       (font-spec :family "Iosevka Slab"
+                  :size 18)
+       (font-spec :family "PragmataPro"
+                  :size 18)
+       "Monospace 14"
+       (font-spec :family "Consolas"
+                  :size 18)))
 (setq doom-variable-pitch-font
-      (font-spec :family "Sarasa Gothic J"
-                 :size 12))
+      (font-candidate
+       (font-spec :family "Sarasa Gothic J"
+                  :size 12)))
 (setq doom-unicode-font
-      (font-spec :family "Sarasa Mono J"
-                 :size 12))
+      (font-candidate
+       (font-spec :family "Sarasa Mono J"
+                  :size 12)))
 
 (setq-default frame-title-format '("%b - Emacs"))
 (setq +doom-dashboard-functions '(doom-dashboard-widget-shortmenu doom-dashboard-widget-loaded))
