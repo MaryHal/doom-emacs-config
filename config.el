@@ -9,6 +9,13 @@
 (when (string= system-type "windows-nt")
   (set-selection-coding-system 'utf-16-le))
 
+(setq auto-window-vscroll nil)
+(setq w32-pipe-read-delay 0)
+
+(put 'narrow-to-region 'disabled nil)
+
+(setq timer-max-repeats 1)
+
 ;; No line numbers
 (setq doom-line-numbers-style nil)
 
@@ -23,10 +30,11 @@
 ;; (setq doom-theme 'doom-nova)
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-one-light)
-(setq doom-theme 'doom-opera)
+;; (setq doom-theme 'doom-opera)
 ;; (setq doom-theme 'doom-opera-light)
 ;; (setq doom-theme 'doom-peacock)
 ;; (setq doom-theme 'doom-solarized-light)
+(setq doom-theme 'doom-sourcerer)
 ;; (setq doom-theme 'doom-spacegrey)
 ;; (setq doom-theme 'doom-tomorrow-day)
 ;; (setq doom-theme 'doom-tomorrow-night)
@@ -35,7 +43,7 @@
 
 (setq doom-font
       (font-spec :family "Iosevka Slab"
-                 :size 12))
+                 :size 13))
 (setq doom-big-font
       (font-spec :family "Iosevka Slab"
                  :size 18))
@@ -99,10 +107,3 @@
 
 (def-package! projectile-ripgrep
   :after projectile)
-
-(setq auto-window-vscroll nil)
-(setq w32-pipe-read-delay 0)
-
-(put 'narrow-to-region 'disabled nil)
-
-(setq timer-max-repeats 1)
