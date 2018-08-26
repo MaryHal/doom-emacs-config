@@ -48,12 +48,12 @@
 (setq doom-font
       (font-candidate
        (font-spec :family "Iosevka Slab"
-                  :size 13)
+                  :size 12)
        (font-spec :family "PragmataPro"
-                  :size 13)
+                  :size 12)
        "Monospace 8"
        (font-spec :family "Consolas"
-                  :size 14)))
+                  :size 13)))
 (setq doom-big-font
       (font-candidate
        (font-spec :family "Iosevka Slab"
