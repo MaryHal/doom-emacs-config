@@ -119,9 +119,10 @@
 
 (after! magit
   (setq magit-display-buffer-function #'magit-display-buffer-fullframe-status-v1)
-
   (when IS-WINDOWS
     (setenv "SSH_ASKPASS" "git-gui--askpass")))
 
 (def-package! projectile-ripgrep
   :after projectile)
+
+(smartparens-global-mode -1)
