@@ -123,5 +123,9 @@
   (when IS-WINDOWS
     (setenv "SSH_ASKPASS" "git-gui--askpass")))
 
+
+(after! org-bullets
+  (setq org-bullets-bullet-list (quote ("◉" "○" "✿" "☀"))))
+
 (def-package! projectile-ripgrep
   :after projectile)
