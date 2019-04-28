@@ -1,6 +1,6 @@
 ;;; private/mary/config.el -*- lexical-binding: t; -*-
 
-(load! "+bindings")
+;; (load! "+bindings")
 
 (defvar +mary-dir (file-name-directory load-file-name))
 
@@ -47,7 +47,7 @@
 
 (setq doom-font
       (font-candidate
-       (font-spec :family "Iosevka Slab"
+       (font-spec :family "Sarasa Term J"
                   :size 12)
        (font-spec :family "PragmataPro"
                   :size 12)
@@ -56,7 +56,7 @@
                   :size 13)))
 (setq doom-big-font
       (font-candidate
-       (font-spec :family "Iosevka Slab"
+       (font-spec :family "Sarasa Term J"
                   :size 18)
        (font-spec :family "PragmataPro"
                   :size 18)
@@ -69,7 +69,7 @@
                   :size 12)))
 (setq doom-unicode-font
       (font-candidate
-       (font-spec :family "Sarasa Mono J"
+       (font-spec :family "Sarasa Term J"
                   :size 12)))
 
 (setq-default frame-title-format '("%b - Emacs"))
@@ -128,5 +128,12 @@
 
 (def-package! projectile-ripgrep
   :after projectile)
+
+;; (def-package! tao-theme
+;;   :init
+;;   (setq tao-theme-use-height nil
+;;         tao-theme-use-boxes nil
+;;         tao-theme-use-sepia nil)
+;;   (load-theme 'tao-yang t nil))
 
 (smartparens-global-mode -1)

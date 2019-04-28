@@ -4,3 +4,4 @@
 ;; (package! stripe-buffer :ignore t :disable)
 ;; (package! vdiff)
 (package! projectile-ripgrep)
+;; (package! tao-theme)
