@@ -16,17 +16,13 @@
 
 (setq timer-max-repeats 1)
 
-;; No line numbers
-(setq display-line-numbers nil
-      doom-line-numbers-style nil)
-
 ;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-city-lights)
 ;; (setq doom-theme 'doom-dracula)
 ;; (setq doom-theme 'doom-molokai)
 ;; (setq doom-theme 'doom-mono-dark)
 ;; (setq doom-theme 'doom-mono-light)
-;; (setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-nord)
 ;; (setq doom-theme 'doom-nord-light)
 ;; (setq doom-theme 'doom-nova)
 ;; (setq doom-theme 'doom-one)
