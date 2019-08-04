@@ -17,7 +17,8 @@
 (setq timer-max-repeats 1)
 
 ;; No line numbers
-(setq doom-line-numbers-style nil)
+(setq display-line-numbers nil
+      doom-line-numbers-style nil)
 
 ;; (setq doom-theme 'doom-challenger-deep)
 ;; (setq doom-theme 'doom-city-lights)
