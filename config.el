@@ -31,7 +31,7 @@
 ;; (setq doom-theme 'doom-opera-light)
 ;; (setq doom-theme 'doom-peacock)
 ;; (setq doom-theme 'doom-solarized-light)
-(setq doom-theme 'doom-sourcerer)
+;; (setq doom-theme 'doom-sourcerer)
 ;; (setq doom-theme 'doom-spacegrey)
 ;; (setq doom-theme 'doom-tomorrow-day)
 ;; (setq doom-theme 'doom-tomorrow-night)
@@ -44,6 +44,8 @@
 
 (setq doom-font
       (font-candidate
+       (font-spec :family "Iosevka Slab"
+                  :size 12)
        (font-spec :family "Sarasa Term J"
                   :size 12)
        (font-spec :family "PragmataPro"
